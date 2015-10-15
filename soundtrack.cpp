@@ -90,7 +90,7 @@ bool soundtrack::operator==(const soundtrack& right) const
 
 bool soundtrack::operator>(const soundtrack& right) const
 {
-	if (dateReleased > right.dateReleased)
+	if (title > right.title)
 		return true;
 	else
 		return false;
@@ -98,7 +98,7 @@ bool soundtrack::operator>(const soundtrack& right) const
 
 bool soundtrack::operator<(const soundtrack& right) const
 {
-	if (dateReleased < right.dateReleased)
+	if (title < right.title)
 		return true;
 	else
 		return false;
@@ -106,11 +106,11 @@ bool soundtrack::operator<(const soundtrack& right) const
 
 ostream &operator<<(ostream& out, const soundtrack& cd)
 {
-	out << cd.getComposer() << "";
-	out << cd.getTitle() << "";
-	out << cd.getLabel() << "";
-	out << cd.getCatalogNumber() << "";
-	out << cd.getDateRecorded() << "";
+	out << cd.getComposer() << "   ";
+	out << cd.getTitle() << "   ";
+	out << cd.getLabel() << "   ";
+	out << cd.getCatalogNumber() << "   ";
+	out << cd.getDateRecorded() << "   ";
 	out << cd.getDateReleased() << "\n";
 
 	return out;
@@ -119,20 +119,37 @@ ostream &operator<<(ostream& out, const soundtrack& cd)
 istream &operator>>(istream &in, soundtrack &val)
 {
 	int iBuf;
-	string buffer;
+	string buffer, temp;
+	string delimiter = " \t";  // Remove trailing whitespace
 
 	getline(in, buffer, '\n');
 
-	val.setComposer(buffer.substr(0, 24));
+	// 0 - 24
+	temp = buffer.substr(0, 24);
+	string composer = temp.substr(0, temp.find_last_not_of(delimiter) + 1);
+	val.setComposer(composer);
 
-	val.setTitle(buffer.substr(24, 40));
+	// 24 - 64
+	temp = buffer.substr(24, 40);
+	string title = temp.substr(0, temp.find_last_not_of(delimiter) + 1);
+	val.setTitle(title);
 
-	val.setLabel(buffer.substr(64, 16));
+	// 64 - 80
+	temp = buffer.substr(64, 16);
+	string label = temp.substr(0, temp.find_last_not_of(delimiter) + 1);
+	val.setLabel(label);
 
-	val.setCatalogNumber(buffer.substr(80, 24));
+	// 80 - 104
+	temp = buffer.substr(80, 24);
+	string catalogNumber = temp.substr(0, temp.find_last_not_of(delimiter) + 1);
+	val.setCatalogNumber(catalogNumber);
 
-	val.setDateRecorded(buffer.substr(104, 8));
+	// 104 - 112
+	temp = buffer.substr(104, 8);
+	string dateRecorded = temp.substr(0, temp.find_last_not_of(delimiter) + 1);
+	val.setDateRecorded(dateRecorded);
 
+	// 112 - 116
 	iBuf = stoi(buffer.substr(112, 4));
 	val.setDateReleased(iBuf);
 

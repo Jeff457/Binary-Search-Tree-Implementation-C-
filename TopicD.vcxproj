@@ -142,8 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="NotFoundException.cpp" />
-    <ClCompile Include="PrecondViolatedExcep.cpp" />
     <ClCompile Include="soundtrack.cpp" />
     <ClCompile Include="TopicD.cpp" />
   </ItemGroup>

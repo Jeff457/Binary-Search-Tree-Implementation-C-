@@ -1,3 +1,12 @@
+/************************************************
+*			Jeff Stanton						*
+*			CS M20   							*
+*			Topic D Project						*
+*												*
+*			BinarySearchTree.h			 		*
+*			Status: Working              		*
+************************************************/
+
 #ifndef _BINARY_SEARCH_TREE
 #define _BINARY_SEARCH_TREE
 

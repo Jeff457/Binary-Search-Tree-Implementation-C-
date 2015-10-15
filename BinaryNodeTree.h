@@ -1,3 +1,12 @@
+/************************************************
+*			Jeff Stanton						*
+*			CS M20   							*
+*			Topic D Project						*
+*												*
+*			BinaryNodeTree.h			 		*
+*			Status: Working              		*
+************************************************/
+
 #ifndef _BINARY_NODE_TREE
 #define _BINARY_NODE_TREE
 
@@ -209,13 +218,19 @@ inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::removeNode(BinaryNode<Ite
 template<class ItemType>
 inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::removeLeftmostNode(BinaryNode<ItemType>* subTreePtr, ItemType & inorderSuccessor)
 {
+	BinaryNode<ItemType>* tempPtr;
+
 	if (subTreePtr->getLeftChildPtr() == nullptr)  // Has no left child (might have a right child)
 	{
 		inorderSuccessor = subTreePtr->getItem();
 		return removeNode(subTreePtr);
 	}
 	else  // Continue to search
-		return removeLeftmostNode(subTreePtr->getLeftChildPtr(), inorderSuccessor);
+	{
+		tempPtr = removeLeftmostNode(subTreePtr->getLeftChildPtr(), inorderSuccessor);
+		subTreePtr->setLeftChildPtr(tempPtr);
+		return subTreePtr;
+	}
 }
 
 template<class ItemType>
