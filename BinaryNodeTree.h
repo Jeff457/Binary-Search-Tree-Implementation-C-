@@ -9,15 +9,13 @@
 template<class ItemType>
 class BinaryNodeTree
 {
-private:
+protected:
 	BinaryNode<ItemType>* rootPtr;
 
-protected:
 	//------------------------------------------------------------
 	// Protected Utility Methods Section:
 	// Recursive helper methods for the public methods.
 	//------------------------------------------------------------
-
 	int getHeightHelper(BinaryNode<ItemType>* subTreePtr) const;
 	int getNumberOfNodesHelper(BinaryNode<ItemType>* subTreePtr) const;
 
@@ -28,17 +26,13 @@ protected:
 	// keep the tree balanced.
 	BinaryNode<ItemType>* balancedAdd(BinaryNode<ItemType>* subTreePtr, BinaryNode<ItemType>* newNodePtr);
 
-	// Removes the target value from the tree by calling moveValuesUpTree
-	// to overwrite value with value from child.
+	// Removes the target value from the tree by calling removeNode which calls removeLeftmostNode
+	// if the target has two children.
 	BinaryNode<ItemType>* removeValue(BinaryNode<ItemType>* subTreePtr, const ItemType target, bool& success);
+	BinaryNode<ItemType>* removeNode(BinaryNode<ItemType>* subTreePtr);
+	BinaryNode<ItemType>* removeLeftmostNode(BinaryNode<ItemType>* subTreePtr, ItemType& inorderSuccessor);
 
-	// Copies values up the tree to overwrite value in current node until
-	// a leaf is reached; the leaf is then removed, since its value is
-	// stored in the parent.
-	BinaryNode<ItemType>* moveValuesUpTree(BinaryNode<ItemType>* subTreePtr);
-
-	// Recursively searches for target value in the tree by using a
-	// preorder traversal.
+	// Recursively searches for target value in the tree
 	BinaryNode<ItemType>* findNode(BinaryNode<ItemType>* treePtr, const ItemType& target, bool& found) const;
 
 	// Copies the tree rooted at treePtr and returns a pointer to
@@ -147,13 +141,81 @@ BinaryNode<ItemType>* BinaryNodeTree<ItemType>::balancedAdd(BinaryNode<ItemType>
 template<class ItemType>
 inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::removeValue(BinaryNode<ItemType>* subTreePtr, const ItemType target, bool & success)
 {
-	return NULL;
-}
+	BinaryNode<ItemType>* tempPtr;
+
+	if (subTreePtr == nullptr)  // Item not found
+	{
+		success = false;
+		return nullptr;
+	}  // end if
+	else if (subTreePtr->getItem() == target)  // Item found
+	{
+		subTreePtr = removeNode(subTreePtr);  // Remove node
+		success = true;
+		return subTreePtr;
+	}  // end else if
+	else
+	{
+		tempPtr = removeValue(subTreePtr->getLeftChildPtr(), target, success);  // Search the left subtree
+		if (success)
+			subTreePtr->setLeftChildPtr(tempPtr);
+		else  // Search the right subtree
+		{
+			tempPtr = removeValue(subTreePtr->getRightChildPtr(), target, success);
+			subTreePtr->setRightChildPtr(tempPtr);
+		}
+		return subTreePtr;
+	}  // end else
+} // end removeValue
 
 template<class ItemType>
-inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::moveValuesUpTree(BinaryNode<ItemType>* subTreePtr)
+inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::removeNode(BinaryNode<ItemType>* subTreePtr)
 {
-	return NULL;
+	BinaryNode<ItemType>* nodeToConnectPtr;
+	ItemType newNodeValue;
+
+	if (subTreePtr->isLeaf())  // If the node is a leaf, remove from the tree
+	{
+		delete subTreePtr;
+		subTreePtr = nullptr;
+		return subTreePtr;
+	} // end if
+
+	// Node has 1 child
+	else if (subTreePtr->getLeftChildPtr() == nullptr || subTreePtr->getRightChildPtr() == nullptr)
+	{
+		if (subTreePtr->getRightChildPtr() == nullptr)  // Node has a left child
+			nodeToConnectPtr = subTreePtr->getLeftChildPtr();
+		else  // Node has a right child
+			nodeToConnectPtr = subTreePtr->getRightChildPtr();
+		
+		delete subTreePtr;
+		subTreePtr = nullptr;
+		return nodeToConnectPtr;
+	} // end else if
+	
+	// Node has 2 children
+	else
+	{
+		// Find the inorder successor of the entry in the node: in the left subtree of
+		// the node's right child
+		nodeToConnectPtr = removeLeftmostNode(subTreePtr->getRightChildPtr(), newNodeValue);
+		subTreePtr->setRightChildPtr(nodeToConnectPtr);
+		subTreePtr->setItem(newNodeValue);
+		return subTreePtr;
+	} // end else
+}  // end removeNode
+
+template<class ItemType>
+inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::removeLeftmostNode(BinaryNode<ItemType>* subTreePtr, ItemType & inorderSuccessor)
+{
+	if (subTreePtr->getLeftChildPtr() == nullptr)  // Has no left child (might have a right child)
+	{
+		inorderSuccessor = subTreePtr->getItem();
+		return removeNode(subTreePtr);
+	}
+	else  // Continue to search
+		return removeLeftmostNode(subTreePtr->getLeftChildPtr(), inorderSuccessor);
 }
 
 template<class ItemType>
@@ -162,22 +224,27 @@ inline BinaryNode<ItemType>* BinaryNodeTree<ItemType>::findNode(BinaryNode<ItemT
 	BinaryNode<ItemType>* nodePtr;
 
 	if (treePtr == nullptr)  // The desired item is not found
+	{
 		found = false;
+		return nullptr;
+	}
 	else if (treePtr->getItem() == target)  // The desired item is found
 	{
 		found = true;
 		return treePtr;
 	}
-	else
+	else  // Search subtrees
 	{
+		// Search left children for target
 		nodePtr = findNode(treePtr->getLeftChildPtr(), target, found);
-		if (!found)  // If not in the left nodes, try the right nodes
+		if (!found)  // Not in the left nodes
 		{
+			// Search right children for target
 			nodePtr = findNode(treePtr->getRightChildPtr(), target, found);
 			if (!found)  // Item not in tree
-				throw(NotFoundException());
+				return nullptr;
 		} // end if
-		else  // Found in left nodes
+		else  // Return found node
 			return nodePtr;
 	} // end else
 }
@@ -228,19 +295,6 @@ inline void BinaryNodeTree<ItemType>::preorder(void visit(ItemType&), BinaryNode
 		preorder(visit, treePtr->getRightChildPtr());
 	} // end if
 } // end preorder
-
-template<class ItemType>
-inline void BinaryNodeTree<ItemType>::preorder(ItemType(&function)(BinaryNode<ItemType>*, const ItemType&, bool&), BinaryNode<ItemType>* treePtr) const
-{
-	bool found = false;
-	if (treePtr != nullptr)
-	{
-		ItemType theItem = treePtr->getItem();
-		function(treePtr, theItem, found);
-		preorder(visit, treePtr->getLeftChildPtr());
-		preorder(visit, treePtr->getRightChildPtr());
-	} // end if
-}
 
 template<class ItemType>
 inline void BinaryNodeTree<ItemType>::inorder(void visit(ItemType&), BinaryNode<ItemType>* treePtr) const
@@ -360,7 +414,7 @@ inline bool BinaryNodeTree<ItemType>::remove(const ItemType & data)
 {
 	bool success = false;
 	
-	removeValue(rootPtr, data, success);
+	rootPtr = removeValue(rootPtr, data, success);
 
 	return success;
 } // end remove
@@ -375,43 +429,37 @@ inline void BinaryNodeTree<ItemType>::clear()
 template<class ItemType>
 inline ItemType BinaryNodeTree<ItemType>::getEntry(const ItemType& anEntry) const throw(NotFoundException)
 {
-	bool ableToGet = ( isEmpty() );
 	bool found = false;
-	if (ableToGet)
-	{
-		try
-		{
-			BinaryNode<ItemType>* nodePtr = findNode(rootPtr, anEntry, found);
-			return nodePtr->getItem();
-		}
-		catch (exception notFound) // Entry not found
-		{ 
-			throw(notFound); 
-		}
-	}
-	else  // Empty Tree
+
+	if ( isEmpty() )  // Empty Tree
 		throw(PrecondViolatedExcep("getEntry() called with empty tree."));
+	else
+	{
+		BinaryNode<ItemType>* nodePtr = findNode(rootPtr, anEntry, found);
+		if (nodePtr == nullptr)  // Item not found
+			throw(NotFoundException());
+		else  // Item found
+			return nodePtr->getItem();
+	}
+		
 } // end getEntry
 
 template<class ItemType>
 inline bool BinaryNodeTree<ItemType>::contains(const ItemType & anEntry) const
 {
-	bool ableToGet = ( isEmpty() );
 	bool contains = true;
-	
-	if (ableToGet)
+
+	if (isEmpty())  // Empty tree
+		throw(PrecondViolatedExcep("contains() called with empty tree."));
+	else
 	{
-		try
-		{
+		try {
 			getEntry(anEntry);  // Find the entry
 		}
-		catch (exception notFound)
-		{
+		catch (exception notFound) {
 			contains = false;  // Entry not found
 		}
 	}
-	else  // Empty Tree
-		throw(PrecondViolatedExcep("contains() called with empty tree."));
 
 	return contains;
 } // end contains

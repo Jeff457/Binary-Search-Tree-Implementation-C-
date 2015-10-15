@@ -1,0 +1,1601 @@
+Create default int tree bst1
+Display bst1
+Preorder:
+
+Inorder:
+
+Postorder:
+
+
+Read values from input file
+Put release year values into bst1
+
+
+ Next, insert following values into bst1 in this order: 1 2 -10 15 -20 0 10
+Display bst1
+Preorder:
+2011
+2004
+1995
+1985
+1
+-10
+-20
+0
+2
+15
+10
+1990
+1989
+1991
+1993
+2003
+1998
+1997
+2002
+1999
+2003
+2003
+2010
+2004
+2005
+2004
+2004
+2004
+2005
+2007
+2006
+2009
+2010
+2010
+2012
+2011
+2013
+2014
+
+Inorder:
+-20
+-10
+0
+1
+2
+10
+15
+1985
+1989
+1990
+1991
+1993
+1995
+1997
+1998
+1999
+2002
+2003
+2003
+2003
+2004
+2004
+2004
+2004
+2004
+2005
+2005
+2006
+2007
+2009
+2010
+2010
+2010
+2011
+2011
+2012
+2013
+2014
+
+Postorder:
+-20
+0
+-10
+10
+15
+2
+1
+1989
+1993
+1991
+1990
+1985
+1997
+1999
+2002
+1998
+2003
+2003
+2003
+1995
+2004
+2004
+2004
+2006
+2009
+2007
+2005
+2005
+2004
+2010
+2010
+2010
+2004
+2011
+2014
+2013
+2012
+2011
+
+Height of bst1 is 8
+
+Number of nodes in bst1 is 38
+
+Retrieve value using getEntry -10 from the tree:
+
+ Found -10 in tree bst1
+
+Use contains to see if value 11 is in the tree:
+
+11 NOT found in bst1
+
+Create bst2, a pointer to BinarySearchTree, from bst1
+Display bst2
+Preorder:
+2011
+2004
+1995
+1985
+1
+-10
+-20
+0
+2
+15
+10
+1990
+1989
+1991
+1993
+2003
+1998
+1997
+2002
+1999
+2003
+2003
+2010
+2004
+2005
+2004
+2004
+2004
+2005
+2007
+2006
+2009
+2010
+2010
+2012
+2011
+2013
+2014
+
+Inorder:
+-20
+-10
+0
+1
+2
+10
+15
+1985
+1989
+1990
+1991
+1993
+1995
+1997
+1998
+1999
+2002
+2003
+2003
+2003
+2004
+2004
+2004
+2004
+2004
+2005
+2005
+2006
+2007
+2009
+2010
+2010
+2010
+2011
+2011
+2012
+2013
+2014
+
+Postorder:
+-20
+0
+-10
+10
+15
+2
+1
+1989
+1993
+1991
+1990
+1985
+1997
+1999
+2002
+1998
+2003
+2003
+2003
+1995
+2004
+2004
+2004
+2006
+2009
+2007
+2005
+2005
+2004
+2010
+2010
+2010
+2004
+2011
+2014
+2013
+2012
+2011
+
+Height of bst2 is 8
+
+Number of nodes in bst2 is 38
+
+Delete 2014 from bst2 
+
+2014 deleted from bst2
+
+Delete 2014 from bst2 
+
+2014 NOT deleted from bst2
+Display bst2
+Preorder:
+2011
+2004
+1995
+1985
+1
+-10
+-20
+0
+2
+15
+10
+1990
+1989
+1991
+1993
+2003
+1998
+1997
+2002
+1999
+2003
+2003
+2010
+2004
+2005
+2004
+2004
+2004
+2005
+2007
+2006
+2009
+2010
+2010
+2012
+2011
+2013
+
+Inorder:
+-20
+-10
+0
+1
+2
+10
+15
+1985
+1989
+1990
+1991
+1993
+1995
+1997
+1998
+1999
+2002
+2003
+2003
+2003
+2004
+2004
+2004
+2004
+2004
+2005
+2005
+2006
+2007
+2009
+2010
+2010
+2010
+2011
+2011
+2012
+2013
+
+Postorder:
+-20
+0
+-10
+10
+15
+2
+1
+1989
+1993
+1991
+1990
+1985
+1997
+1999
+2002
+1998
+2003
+2003
+2003
+1995
+2004
+2004
+2004
+2006
+2009
+2007
+2005
+2005
+2004
+2010
+2010
+2010
+2004
+2011
+2013
+2012
+2011
+
+Height of bst2 is 8
+
+Number of nodes in bst2 is 37
+
+Create bst3 then assign bst2 to bst3
+Display bst3
+Preorder:
+2011
+2004
+1995
+1985
+1
+-10
+-20
+0
+2
+15
+10
+1990
+1989
+1991
+1993
+2003
+1998
+1997
+2002
+1999
+2003
+2003
+2010
+2004
+2005
+2004
+2004
+2004
+2005
+2007
+2006
+2009
+2010
+2010
+2012
+2011
+2013
+
+Inorder:
+-20
+-10
+0
+1
+2
+10
+15
+1985
+1989
+1990
+1991
+1993
+1995
+1997
+1998
+1999
+2002
+2003
+2003
+2003
+2004
+2004
+2004
+2004
+2004
+2005
+2005
+2006
+2007
+2009
+2010
+2010
+2010
+2011
+2011
+2012
+2013
+
+Postorder:
+-20
+0
+-10
+10
+15
+2
+1
+1989
+1993
+1991
+1990
+1985
+1997
+1999
+2002
+1998
+2003
+2003
+2003
+1995
+2004
+2004
+2004
+2006
+2009
+2007
+2005
+2005
+2004
+2010
+2010
+2010
+2004
+2011
+2013
+2012
+2011
+
+Height of bst3 is 8
+
+Number of nodes in bst3 is 37
+
+
+***************************************************************
+Press Enter to continue --> 
+
+Create bstT1 which is a binary search tree of soundtrack objects
+
+
+
+Put soundtrack records into bstST1
+
+
+Display bstST1
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Inorder:
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Postorder:
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+
+Height of bstST1 is 11
+
+Number of nodes in bstST1 is 31
+
+Create bstST2 from bstST1
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Inorder:
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Postorder:
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Patrick Doyle  Much Ado About Nothing  Epic  EX 54009  3/93  1993
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+
+Height of bstST2 is 11
+
+Number of nodes in bstST2 is 31
+
+
+***************************************************************
+Press Enter to continue --> 
+
+Search bstST2 using getEntry for the object that has Godzilla as a title
+
+
+ Found.  The object consists of Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+
+Search bstST2 using getEntry for the object that has godzilla as a title
+
+Not Found Exception: The entry was not found 
+
+
+
+Search bstST2 using getEntry for the object that has Elmer Bernstein as the composer
+
+Not Found Exception: The entry was not found 
+
+
+
+Delete the object from bstST2 with the title Much Ado About Nothing, a leaf
+
+
+"Much Ado About Nothing" deleted from bstST2
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Miklos Rozsa  Moonfleet  FSM  V6N20  1/55  2004
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Height of bstST2 is 10
+
+Number of nodes in bstST2 is 30
+
+
+Delete the object from bstST2 with the title Moonfleet, a tree with only a right subtree 
+
+
+"Moonfleet" deleted from bstST2
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Akira Ifukube  Godzilla  La-La Land  LLLCD 1022  1954  2004
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Height of bstST2 is 9
+
+Number of nodes in bstST2 is 29
+
+
+Delete the object from bstST2 with title Godzilla, a tree with two subtrees whose right child is the inorder successor
+
+
+"Godzilla" deleted from bstST2
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Georges Delerue  King of Hearts  Varese Sarabande  SBS 2017  1966  2004
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Height of bstST2 is 9
+
+Number of nodes in bstST2 is 28
+
+
+Delete the object from bstST2 with the title King of Hearts, a tree with two children whose right child is NOT the inorder successor
+
+
+"King of Hearts" deleted from bstST2
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Height of bstST2 is 9
+
+Number of nodes in bstST2 is 27
+
+
+Retrieve the object with title Psycho using contains
+
+
+"Psycho" found in bstST2
+
+
+Display bstST2
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Inorder:
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Postorder:
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+
+Height of bstST2 is 9
+
+Number of nodes in bstST2 is 27
+
+
+***************************************************************
+Press Enter to continue --> 
+
+Create bstST3, a pointer to BinarySearchTree, and then assign bstST2 to it
+
+Display bstST3
+Preorder:
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Inorder:
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+
+Postorder:
+Miklos Rozsa  El Cid  FSM  Box 04 Disc 13  10/61  2010
+
+Elmer Bernstein  Cast A Giant Shadow  Varese Sarabande  VCL 05021008  1966  2002
+
+Elmer Bernstein  Birdman of Alcatraz  Varese Sarabande  VCL 11061054  1962  2006
+
+John Barry  From Russia With Love  EMI  72435-80588-2-6  3/63  2003
+
+Miklos Rozsa  Ben-Hur  FSM  V15N1  1959  2012
+
+William Walton  Henry V  Chandos  CHAN 8892  5/90  1990
+
+Elmer Bernstein  Hawaii  Varese Sarabande  VCL 04031017  6/66  2003
+
+Bronislau Kaper  Mutiny on the Bounty  FSM  V7N16  1962  2004
+
+Bernard Herrmann  Psycho  Varese Sarabande  VSD-5765  9/96  1997
+
+Elmer Bernstein  Summer and Smoke  RCA  74321720592  11/62  1999
+
+Bernard Herrmann  The 7th Voyage of Sinbad  Prometheus  XPCD 166  1958  2009
+
+Erich Wolfgang Korngold  The Adventures of Robin Hood  Marco Polo  8.225268  2/03  2003
+
+Bronislau Kaper  Lord Jim  FSM  V8N11  12/64  2005
+
+Dimitri Tiomkin  The Alamo  Prometheus  XPCD 168  11/09  2010
+
+Maurice Jarre  Lawrence of Arabia  tadlow music:  TADLOW012  3/10  2010
+
+Howard Shore  The Fellowship of the Ring  Reprise  49454-2  2001  2005
+
+Elmer Bernstein  The Great Escape  Intrada  MAF 7112  1963  2011
+
+Dimitri Tiomkin  The Guns of Navarone  Varese Sarabande  VSD-5236  1961  1989
+
+Bernard Herrmann  The Ghost and Mrs. Muir  Varese Sarabande  VCD 47254  1947  1985
+
+Elmer Bernstein  The Magnificent Seven  Ryko  RCD 10741  1960  1998
+
+Alex North  The Shoes of the Fisherman  FSM  V7N6  9/68  2004
+
+Franz Waxman  The Nun's Story  Stanyan  STZ-114  1958  1991
+
+Maurice Jarre  The Train  FSM  V10N8  1964  2007
+
+Elmer Bernstein  To Kill a Mockingbird  Intrada  262  1963  2014
+
+Jerry Fielding  The Wild Bunch  FSM  V16N1  1969  2013
+
+John Barry  The Lion in Winter  Legacy  CK66133  8/68  1995
+
+Bernard Herrmann  The Egyptian  Varese Sarabande  VCL 1211 1128 9  1954  2011
+
+
+Height of bstST3 is 9
+
+Number of nodes in bstST3 is 27
+
+
+Program Over
+
+Press Enter to end -->  
