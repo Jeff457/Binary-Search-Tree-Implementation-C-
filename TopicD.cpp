@@ -246,6 +246,12 @@ int main()
 	traverse(*bstST3, 4);
 	heightAndNodes(*bstST3, "bstST3");
 
+	// Deallocate dynamic memory
+	delete bst2;
+	bst2 = nullptr;
+	delete bstST3;
+	bstST3 = nullptr;
+
 	// Program over
 	endProgram();
 
